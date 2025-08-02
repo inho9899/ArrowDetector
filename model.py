@@ -2,7 +2,7 @@
 from ultralytics import YOLO
 import torch
 
-model = YOLO("Arrow_250802")  # 로딩은 한 번만
+model = YOLO("Arrow_250802.pt")  # 로딩은 한 번만
 
 def get_answer(img):
     detect_res = model(img, conf=0.8, verbose=False)[0].boxes
